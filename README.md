@@ -1,3 +1,18 @@
+# [Hyprland](https://github.com/hyprwm/Hyprland)
+Simple clean config for [hyprland](https://github.com/hyprwm/Hyprland). Inspired by **prasanthrangan's** [hyprdots](https://github.com/prasanthrangan/hyprdots?tab=GPL-3.0-1-ov-file)<br>
+
+- [waybar](https://github.com/Alexays/Waybar) - Status bar
+- [dunst](https://github.com/dunst-project/dunst) - Notification daemon
+- [alacritty](https://github.com/alacritty/alacritty) - Terminal emulator
+- [fzf](https://github.com/junegunn/fzf) - CLI fuzzy search, command history, files
+- [fuzzel](https://codeberg.org/dnkl/fuzzel) - Application launcher
+- [tuigreet](https://github.com/apognu/tuigreet) - TUI display manager
+- [rofi](https://github.com/davatorium/rofi) - Clipboard history
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/) - Configuration framework for [zsh](https://www.zsh.org/)
+- [starship](https://github.com/starship/starship) - Shell prompt
+
+![preview](preview.png)
+
 # How to setup:
 
 ## Hyprland
@@ -38,6 +53,7 @@ kvantum.kvconfig <br>
 hypr/themes/theme.conf <br>
 
 ## GNU Stow
+Apply configuration directly from this repo. Just place this dir to your `home` directory and use [stow](https://archlinux.org/packages/extra/any/stow/) 
 ```bash
 stow --adopt .
 ```
