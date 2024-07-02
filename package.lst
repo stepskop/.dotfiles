@@ -1,0 +1,81 @@
+# --------------------------------------------------- // System
+pipewire                                               # audio/video server
+pipewire-alsa                                          # pipewire alsa client
+pipewire-audio                                         # pipewire audio client
+pipewire-jack                                          # pipewire jack client
+pipewire-pulse                                         # pipewire pulseaudio client
+gst-plugin-pipewire                                    # pipewire gstreamer client
+wireplumber                                            # pipewire session manager
+pavucontrol                                            # pulseaudio volume control
+pamixer                                                # pulseaudio cli mixer
+networkmanager                                         # network manager
+network-manager-applet                                 # network manager system tray utility
+bluez                                                  # bluetooth protocol stack
+bluez-utils                                            # bluetooth utility cli
+blueman                                                # bluetooth manager gui
+brightnessctl                                          # screen brightness control
+
+# --------------------------------------------------- // Display Manager
+greetd-tuigreet                                        # display manager
+
+# --------------------------------------------------- // Window Manager
+# Better to have installed before, GPU configuration may differ
+#hyprland                                               # wlroots-based wayland compositor
+dunst                                                  # notification daemon
+rofi-lbonn-wayland-git                                 # application launcher
+fuzzel                                                 # application launcher
+waybar                                                 # system bar
+hyprpaper                                              # wallpaper
+hyprswitch					       # Hyprland "alt-tab"
+hyprlock                                               # lock screen
+wlogout                                                # logout menu
+grimblast-git                                          # screenshot tool
+hyprpicker-git                                         # color picker
+slurp                                                  # region select for screenshot/screenshare
+swappy                                                 # screenshot editor
+cliphist                                               # clipboard manager
+wf-recorder
+celluloid
+
+
+# --------------------------------------------------- // Font
+ttf-jetbrains-mono-nerd
+noto-fonts-emoji
+
+
+# --------------------------------------------------- // Dependencies
+polkit-kde-agent                                       # authentication agent
+xdg-desktop-portal-hyprland                            # xdg desktop portal for hyprland
+pacman-contrib                                         # for system update check
+python-pyamdgpuinfo                                    # for amd gpu info
+parallel                                               # for parallel processing
+jq                                                     # for json processing
+imagemagick                                            # for image processing
+
+
+# --------------------------------------------------- // Theming
+nwg-look                                               # gtk configuration tool
+qt5ct                                                  # qt5 configuration tool
+qt6ct                                                  # qt6 configuration tool
+kvantum                                                # svg based qt theme engine
+qt5-wayland                                            # wayland support in qt5
+qt6-wayland                                            # wayland support in qt6
+
+
+# --------------------------------------------------- // Applications
+alacritty                                              # terminal
+nautilus                                               # gnome file manager
+ark                                                    # kde file archiver
+vim                                                    # terminal text editor
+visual-studio-code-bin                                 # ide text editor
+
+
+# --------------------------------------------------- // Shell
+zsh                                                    # zsh
+oh-my-zsh-git                                          # plugin manager for zsh
+starship                                               # customizable shell prompt
+neofetch                                               # fetch tool
+fzf                                                    # fuzzy finder
+zoxide                                                 # cd utility
+bat						       # better cat
+eza						       # better ls utility

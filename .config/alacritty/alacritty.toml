@@ -1,0 +1,23 @@
+[window]
+opacity = 0.9
+blur = true
+padding = {x=32,y=32}
+dynamic_title=true
+
+[colors.primary]
+background="#242239"
+
+[cursor]
+style={shape="Beam",blinking="On"}
+vi_mode_style={shape="Beam",blinking="On"}
+
+[font]
+normal={family="JetBrainsMono Nerd Font", style="Regular"}
+size=12
+offset.y=0
+
+[[keyboard.bindings]]
+key = "Back"
+mods = "Control"
+chars =  "\u0017"
+
