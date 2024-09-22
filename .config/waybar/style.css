@@ -37,6 +37,13 @@ tooltip {
     animation: ws_normal 20s ease-in-out 1;
 }
 
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
 #workspaces button.active {
     background: @wb-act-bg;
     color: @wb-act-fg;
@@ -46,13 +53,6 @@ tooltip {
     /* margin-right: 2px; */
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#workspaces button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-fg;
-    animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button {
@@ -68,6 +68,7 @@ tooltip {
     margin-right: 0px;
     color: @wb-color;
     animation: tb_normal 20s ease-in-out 1;
+    min-width: 0px;
 }
 
 #taskbar button.active {
@@ -88,7 +89,9 @@ tooltip {
     animation: tb_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
 }
-
+#taskbar {
+	min-width: 0px;
+}
 
 
 #backlight,
@@ -139,8 +142,8 @@ tooltip {
 }
 
 #tray:hover {
-	color: #ff5e5e;
-	animation: tb_active 20s ease-in-out 1;
+    color: #ff5e5e;
+    animation: tb_active 20s ease-in-out 1;
     transition: all 0.2s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
