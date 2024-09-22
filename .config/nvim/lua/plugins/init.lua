@@ -87,13 +87,18 @@ return {
 	-- },
 	-- Theme + UI
 	{
-		"sainnhe/everforest",
+		-- "sainnhe/everforest",
 		--[[ "joshdick/onedark.vim", ]]
 		--[[ "edeneast/nightfox.nvim", ]]
+		-- "ellisonleao/gruvbox.nvim",
+		-- "folke/tokyonight.nvim",
+		-- "rebelot/kanagawa.nvim",
+		-- "sho-87/kanagawa-paper.nvim",
+		"catppuccin/nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme everforest]])
+			vim.cmd([[colorscheme catppuccin]])
 		end,
 	},
 	{
