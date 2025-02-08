@@ -1,14 +1,23 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.editorconfig = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes:1"
 
 -- Indent
+-- vim.opt.smartindent = true
+-- vim.opt.termguicolors = true
+-- vim.opt.pumheight = 10
+-- vim.opt.tabstop = 4
+-- vim.opt.shiftwidth = 4;
+
+--vim.opt.expandtab = false
+vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
-vim.opt.termguicolors = true
-vim.opt.pumheight = 10
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'

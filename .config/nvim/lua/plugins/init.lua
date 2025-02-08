@@ -6,6 +6,21 @@ return {
 	--},
 	-- LSP Configs, Completions, Formatting
 	{
+	  "Diogo-ss/42-header.nvim",
+	  cmd = { "Stdheader" },
+	  keys = { "<F1>" },
+	  opts = {
+	    default_map = true, -- Default mapping <F1> in normal mode.
+	    auto_update = true, -- Update header when saving.
+	    user = "username", -- Your user.
+	    mail = "your@email.com", -- Your mail.
+	    -- add other options.
+	  },
+	  config = function(_, opts)
+	    require("42header").setup(opts)
+	  end,
+	},
+	{
 		"williamboman/mason.nvim",
 		opts = function()
 			return require("config.mason_config").opts
@@ -87,18 +102,18 @@ return {
 	-- },
 	-- Theme + UI
 	{
-		-- "sainnhe/everforest",
+		"sainnhe/everforest",
 		--[[ "joshdick/onedark.vim", ]]
 		--[[ "edeneast/nightfox.nvim", ]]
 		-- "ellisonleao/gruvbox.nvim",
 		-- "folke/tokyonight.nvim",
 		-- "rebelot/kanagawa.nvim",
 		-- "sho-87/kanagawa-paper.nvim",
-		"catppuccin/nvim",
+		-- "catppuccin/nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme catppuccin]])
+			vim.cmd([[colorscheme everforest]])
 		end,
 	},
 	{
@@ -125,6 +140,7 @@ return {
 		},
 		keys = {
 			{ "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files" },
+			{ "<C-f>", "<cmd>Telescope live_grep<cr>", desc = "Fuzzy live grep" },
 		},
 		config = function()
 			require("config.telescope")

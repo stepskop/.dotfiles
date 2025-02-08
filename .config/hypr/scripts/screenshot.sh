@@ -29,13 +29,13 @@ EOF
 
 case $1 in
 p)  # print all outputs
-    grimblast copysave screen $temp_screenshot && swappy -f $temp_screenshot ;;
+    grimblast copysave screen $temp_screenshot && satty -f $temp_screenshot -o $save_dir/$save_file ;;
 s)  # drag to manually snip an area / click on a window to print it
-    grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+    grimblast copysave area $temp_screenshot && satty -f $temp_screenshot -o $save_dir/$save_file ;;
 sf)  # frozen screen, drag to manually snip an area / click on a window to print it
-    grimblast --freeze copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+    grimblast --freeze copysave area $temp_screenshot && satty -f $temp_screenshot -o $save_dir/$save_file ;;
 m)  # print focused monitor
-    grimblast copysave output $temp_screenshot && swappy -f $temp_screenshot ;;
+    grimblast copysave output $temp_screenshot && satty -f $temp_screenshot -o $save_dir/$save_file ;;
 *)  # invalid option
     print_error ;;
 esac
@@ -43,6 +43,6 @@ esac
 rm "$temp_screenshot"
 
 if [ -f "$save_dir/$save_file" ] ; then
-    dunstify "t1" -a "saved in $save_dir" -i "$save_dir/$save_file" -r 91190 -t 2200
+    #dunstify "t1" -a "saved in $save_dir" -i "$save_dir/$save_file" -r 91190 -t 2200
 fi
 

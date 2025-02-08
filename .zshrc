@@ -146,7 +146,7 @@ alias haxagon-vpn='wg-quick up wg0'
 alias haxagoff-vpn='wg-quick down wg0'
 alias haxagon-e2e-db-refresh='mongosh haxagon --eval "db.dropDatabase()" && mongorestore -d haxagon $HOME/HAXAGON/e2e-localdev/haxagon-seed/haxagon'
 #Docker cleanup
-alias dclear='docker rm $(docker ps -a -q) -f & docker rmi $(docker images -a -q) -f & docker network prune -f'
+alias dclear='docker rm $(docker ps -a -q) -f; docker rmi $(docker images -a -q) -f; docker network prune -f; docker volume rm $(docker volume ls -f dangling=true -q); docker buildx prune --all'
 
 #get icon for starship
 _distro=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
@@ -213,3 +213,7 @@ export PATH="$PATH:$HOME/.local/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias francinette=/home/steps/francinette/tester.sh
+
+alias paco=/home/steps/francinette/tester.sh
