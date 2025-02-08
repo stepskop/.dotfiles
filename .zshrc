@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=$HOME/.oh-my-zsh/
 
 # List of plugins used
 plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
@@ -146,7 +146,8 @@ alias haxagon-vpn='wg-quick up wg0'
 alias haxagoff-vpn='wg-quick down wg0'
 alias haxagon-e2e-db-refresh='mongosh haxagon --eval "db.dropDatabase()" && mongorestore -d haxagon $HOME/HAXAGON/e2e-localdev/haxagon-seed/haxagon'
 #Docker cleanup
-alias dclear='docker rm $(docker ps -a -q) -f; docker rmi $(docker images -a -q) -f; docker network prune -f; docker volume rm $(docker volume ls -f dangling=true -q); docker buildx prune --all'
+alias dclear='docker rm $(docker ps -a -q) -f & docker rmi $(docker images -a -q) -f & docker network prune -f'
+alias docker-cleanup='docker system prune && docker volume rm $(docker volume ls -qf dangling=true) && docker buildx prune'
 
 #get icon for starship
 _distro=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
